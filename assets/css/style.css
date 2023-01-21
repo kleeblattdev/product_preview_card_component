@@ -1,0 +1,161 @@
+/* Color-scheme 
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Light cyan: hsl(158, 36%, 50%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+*/
+
+/* Font-family 
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url(../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, h1{
+    font-size: 0.8rem;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 0.8em;
+    margin-bottom: 10px;
+}
+
+h1, p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+} 
+
+h2, .newPrice{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.newPrice{
+    color: hsl(158, 36%, 50%);
+    padding-top: 15px;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+}
+
+button{
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: left 30% center;
+
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(158, 36%, 50%);
+    font-weight: 700;
+
+    border: none;
+    border-radius: 10px;
+    margin: 0 20px 20px 20px;
+    padding: 15px 0;
+    width: 90%;
+}
+
+button:hover{
+    background-color: hsl(158, 36%, 37%);
+    cursor: pointer;
+}
+
+/* HEADER STYLE */
+
+/* MAIN STYLE */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    padding: 5vh 5vw;
+}
+
+.productCard {
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    margin: auto;
+    max-width: 40vw;
+}
+
+.productImg{
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.productText{
+    padding: 2vh 4vw;
+}
+
+.description{
+    line-height: 1.8em;
+    margin-bottom: 10px;
+}
+
+.price{
+    margin: 2vh 0;
+}
+
+.newPrice, .oldPrice{
+    display: inline;
+}
+
+.oldPrice{
+    padding-left: 20px;
+}
+
+/* FOOTER STYLE*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* MEDIA QUERIES FOR Tablet*/
+
+@media screen and (min-width: 768px) {
+    .productCard{
+        display: flex;
+    }
+
+    .productImg{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .productText{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    button{
+        align-self: flex-end;
+    }
+}
